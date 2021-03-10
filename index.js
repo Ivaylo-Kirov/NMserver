@@ -16,6 +16,7 @@ app.get('/', (req, res) => {
     .then((response) => {
         countries = response.data;
         res.send(JSON.stringify(countries));
+        // reminder here that JSON.stringify basically grabs a JS object and converts it to a valid JSON String
     })
     .catch((err) => console.log(err));
 })
